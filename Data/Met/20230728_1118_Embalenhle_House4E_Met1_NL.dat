@@ -1,0 +1,5 @@
+"TOA5","CR300-7891","CR300","22895","CR300.Std.10.01","CPU:CR300_Smashblock_20211019.CR300","26376","Public"
+"TIMESTAMP","RECORD","BattV","AirTC","RH","WSpeed","WDir"
+"TS","RN","Volts","Deg C","%","meters/second","degrees"
+"","","","","","",""
+"2023-07-28 11:01:50.422",27,14.11738,-6.6623,112.5506,"NAN",0

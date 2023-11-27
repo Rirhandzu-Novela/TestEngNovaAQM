@@ -1,0 +1,5 @@
+"TOA5","CR300Series_Station 2","CR300","2286","CR300.Std.02.00","CPU:CR300_Athletics.CR300","20039","DataTableInfo"
+"TIMESTAMP","RECORD","DataTableName(1)","DataTableName(2)","SkippedRecord(1)","SkippedRecord(2)","DataRecordSize(1)","DataRecordSize(2)","SecsPerRecord(1)","SecsPerRecord(2)","DataFillDays(1)","DataFillDays(2)"
+"TS","RN","","","","","records","records","","","days","days"
+"","","","","","","","","","","",""
+"2023-07-19 10:41:05.337",2,"TableMin","TableHourly",0,0,615009,10540,60,3600,427.0896,439.1667

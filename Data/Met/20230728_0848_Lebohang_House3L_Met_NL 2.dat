@@ -1,0 +1,6 @@
+"TOA5","CR200test","CR200X","No_SN","CR200X.Std.02","RMyoungFinalProgram2021_cr200.CR2","36029","Public"
+"TIMESTAMP","RECORD","BattV","AirTC","RH","WSpeed","WDir"
+"TS","RN","Volts","Deg C","%","meters/sec","degrees"
+"","","","","","",""
+"2023-07-28 09:17:54",14498,13.68621,51.57821,83.62643,"NAN",0
+"2023-07-28 09:19:45",14520,13.74413,49.30866,83.46312,"NAN",0
