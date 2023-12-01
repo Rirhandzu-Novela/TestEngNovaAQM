@@ -3,18 +3,18 @@
 library(tidyverse)
 library(openair)
 library(magrittr)
-library(novaAQM)
-library(novaReport)
+library(novaAQMeng)
+
 
 # Read dat files ----------------------------------------------------------
 
 dr1 <- "Data/Met/"
 fn <- list.files(dr1)
 
-ls_weer <- leesNWU(dr1)
-names(ls_weer) <- fn
+ls_met <- readNWU(dr1)
+names(ls_met) <- fn
 
-dfMet <- tibble(filename = fn, data = ls_weer) %>%
+dfMet <- tibble(filename = fn, data = ls_met) %>%
   mutate(ncol = map_int(data, ncol),
          nrow = map_int(data, nrow),
          town = gsub("([[:digit:]]{8})_([[:digit:]]{4})_([[:alpha:]]{8,10})_House[[:print:]]*.dat", "\\3", filename),
