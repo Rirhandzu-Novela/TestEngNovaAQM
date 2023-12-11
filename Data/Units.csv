@@ -1,0 +1,75 @@
+﻿variable,unit
+PM2.5,µg/m³
+PM10,µg/m³
+SO2,ppb
+NO2,ppb
+Nox,ppb
+H2S,ppb
+CO,ppm
+O3,ppb
+NO,ppb
+PM Coarse,µg/m³
+Black Carbon,'µg/m³
+Benzene,ppb
+Toulene,ppb
+p-xylene,ppb
+Ethyl Benzene,ppb
+SO2_1,ppb
+PM10_s,µg/m³
+PM2.5_s,µg/m³
+PM1_s,µg/m³
+Amb Wspeed,m/s
+Amb Wdirection,Deg
+Amb Temp,Deg cel
+Amb RelHum,perc
+Solar Rad,W/m2
+Amb Pressure,mBar
+Shelter Int Temp,watt/m2
+Flow,lpm
+CONCRT,µg/m³
+CONCHR,µg/m³
+WS,m/s
+WD,Deg
+AT,Deg cel
+RH,perc
+BP,mmHg
+FT,Deg cel
+FRH,perc
+BV,v
+PM,NA
+Status,NA
+RECORD,NA
+WSpeed_Max,m/s
+WSpeed_s_WVT,m/s
+WDir_D1_WVT,Deg
+WDir_SD1_WVT,Deg
+Temp_Avg,Deg cel
+AirTC_Avg,Deg cel
+Rain_mm_Tot,mm
+BattV_Min,NA
+Temp_Max,Deg cel
+Temp_Min,Deg cel
+AirTC_Max,Deg cel
+AirTC_Min,Deg cel
+RH_Max,perc
+RH_Min,perc
+BattV_Avg,NA
+RH_Avg,perc
+WSpeed_Avg,m/s
+WDir_Avg,Deg
+BattV,NA
+Wind_Speed (m/s),m/s
+Wind_Direction,Deg
+Wind_Direction_Std,Deg
+Wind_Speed_Max ,m/s
+Temperature,Deg cel
+Relative_Humidity,perc
+Solar_Radiation,W/m2
+Rainfall,mm
+Pressure,hpa
+Battery_Voltage,v
+CO2,ppm
+Line_Voltage,v
+BC,NA
+AirTemperature,Deg cel
+Logger_Temperature,Deg cel
