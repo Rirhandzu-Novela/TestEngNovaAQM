@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<kml xmlns:xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:xmlns_kml="http://www.opengis.net/kml/2.2" xmlns:xmlns_atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <Placemark>
+      <name>House1L</name>
+      <LookAt>
+        <longitude>28.94472222</longitude>
+        <latitude>-26.37972222</latitude>
+        <altitude>0</altitude>
+      </LookAt>
+      <Point>
+        <coordinates>28.94472222,-26.37972222,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

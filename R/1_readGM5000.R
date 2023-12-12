@@ -16,21 +16,90 @@ GM_Raw <- map(fls, ~{
   readr::read_csv(file = .) %>%
     pivot_longer(cols = -Date) %>%
     tidyr::separate(col = name, into = c("station", "variable"), sep = "_") %>%
-    tidyr::separate(col = variable, into = c("variable", "unit"), sep = " ") %>%
-    mutate(unit = gsub("[()]", "", unit), instrument = "GM5000") %>%
-    mutate(Date = lubridate::ymd_hms(Date, tz = "Africa/Johannesburg")) %>%
-    mutate(town = all_of(town))
+    mutate(instrument = "GM5000") %>%
+    mutate(Date = lubridate::`tz<-`(Date, "Africa/Johannesburg"))
 
 }
 ) %>%
   dplyr::bind_rows() %>%
-  pivot_wider(id_cols = c(Date, town, station),
+  pivot_wider(id_cols = c(Date, station),
               names_from = variable, values_from = value)
+
+
+# Read Met dat files ----------------------------------------------------------
+
+dr1 <- "Data/Met/"
+fn <- list.files(dr1)
+
+ls_met <- readNWU(dr1)
+names(ls_met) <- fn
+
+Met_Raw <- tibble(filename = fn, data = ls_met) %>%
+  mutate(ncol = map_int(data, ncol),
+         nrow = map_int(data, nrow),
+         station = gsub("([[:digit:]]{8})_([[:digit:]]{4})_([[:alpha:]]{8,10})_(House[[:digit:]]{1}[[:alpha:]]{1})_[[:print:]]*.dat", "\\4", filename),
+         Date = lubridate::ymd(gsub("([[:digit:]]{8})_([[:digit:]]{4})_([[:alpha:]]{8,10})_(House[[:digit:]]{1}[[:alpha:]]{1})_[[:print:]]*.dat", "\\1", filename))
+  ) %>%
+  filter(nrow >100) %>%
+  select(data, station) %>%
+  unnest(data) %>%
+  arrange(TIMESTAMP) %>%
+  distinct()
+
+
+# Merge air poll and met data ---------------------------------------------
+
+
+GMMet <- left_join(x = GM_Raw, y = Met_Raw, by = c("Date" = "TIMESTAMP", "station"))
+
+
 
 # Save --------------------------------------------------------------------
 
-save(GM_Raw, file = "Data/GM_Raw.csv")
+House1E <- GMMet %>%
+  filter(station == "House1E") %>%
+  select(-station)
 
+write_csv(House1E, file = "Station/House1E.csv")
 
+House2E <- GMMet %>%
+  filter(station == "House2E") %>%
+  select(-station)
 
+write_csv(House2E, file = "Station/House2E.csv")
 
+House3E <- GMMet %>%
+  filter(station == "House3E") %>%
+  select(-station)
+
+write_csv(House3E, file = "Station/House3E.csv")
+
+House4E <- GMMet %>%
+  filter(station == "House4E") %>%
+  select(-station)
+
+write_csv(House4E, file = "Station/House4E.csv")
+
+House1L <- GMMet %>%
+  filter(station == "House1L") %>%
+  select(-station)
+
+write_csv(House1L, file = "Station/House1L.csv")
+
+House2L <- GMMet %>%
+  filter(station == "House2L") %>%
+  select(-station)
+
+write_csv(House2L, file = "Station/House2L.csv")
+
+House3L <- GMMet %>%
+  filter(station == "House3L") %>%
+  select(-station)
+
+write_csv(House3L, file = "Station/House3L.csv")
+
+House4L <- GMMet %>%
+  filter(station == "House4L") %>%
+  select(-station)
+
+write_csv(House4L, file = "Station/House4L.csv")

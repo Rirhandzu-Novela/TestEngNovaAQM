@@ -1,0 +1,75 @@
+﻿Pollutant
+PM2.5
+PM10
+SO2
+NO2
+Nox
+H2S
+CO
+O3
+NO
+PM Coarse
+Black Carbon
+Benzene
+Toulene
+p-xylene
+Ethyl Benzene
+SO2_1
+PM10_s
+PM2.5_s
+PM1_s
+Amb Wspeed
+Amb Wdirection
+Amb Temp
+Amb RelHum
+Solar Rad
+Amb Pressure
+Shelter Int Temp
+Flow
+CONCRT
+CONCHR
+WS
+WD
+AT
+RH
+BP
+FT
+FRH
+BV
+PM
+Status
+RECORD
+WSpeed_Max
+WSpeed_s_WVT
+WDir_D1_WVT
+WDir_SD1_WVT
+Temp_Avg
+AirTC_Avg
+Rain_mm_Tot
+BattV_Min
+Temp_Max
+Temp_Min
+AirTC_Max
+AirTC_Min
+RH_Max
+RH_Min
+BattV_Avg
+RH_Avg
+WSpeed_Avg
+WDir_Avg
+BattV
+Wind_Speed (m/s)
+Wind_Direction
+Wind_Direction_Std
+Wind_Speed_Max 
+Temperature
+Relative_Humidity
+Solar_Radiation
+Rainfall
+Pressure
+Battery_Voltage
+CO2
+Line_Voltage
+BC
+AirTemperature
+Logger_Temperature
