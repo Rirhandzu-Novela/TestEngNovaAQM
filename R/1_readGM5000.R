@@ -74,7 +74,7 @@ add_units <- function(col_name) {
   )
 
   if (!is.null(units)) {
-    return(paste(col_name, "(", units, ")", sep = ""))
+    return(paste(col_name, " (", units, ")", sep = ""))
   } else {
     return(col_name)
   }

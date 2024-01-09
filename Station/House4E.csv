@@ -1,4 +1,4 @@
-Date,CO (ppm),O3 (ppb),PM2.5 (ug/m3),RECORD,WSpeed_Max(m/s),WSpeed_S_WVT(m/s),WDir_D1_WVT(Deg),WDir_SD1_WVT(Deg),Temp_Avg(DegC),AirTC_Avg(DegC),RH(%),Rain_mm_Tot(mm),BattV_Min(v),Temp_Max(DegC),Temp_Min(DegC),AirTC_Max(DegC),AirTC_Min(DegC),RH_Max(%),RH_Min(%),BattV_Avg(v),RH_Avg(%),WSpeed_Avg(m/s),WDir_Avg(Deg),BattV(v)
+Date,CO (ppm),O3 (ppb),PM2.5 (ug/m3),RECORD,WSpeed_Max (m/s),WSpeed_S_WVT (m/s),WDir_D1_WVT (Deg),WDir_SD1_WVT (Deg),Temp_Avg (DegC),AirTC_Avg (DegC),RH (%),Rain_mm_Tot (mm),BattV_Min (v),Temp_Max (DegC),Temp_Min (DegC),AirTC_Max (DegC),AirTC_Min (DegC),RH_Max (%),RH_Min (%),BattV_Avg (v),RH_Avg (%),WSpeed_Avg (m/s),WDir_Avg (Deg),BattV (v)
 2023-02-21T22:00:00Z,1.8000000000001e-4,17.63408,12.6374,44496,NA,NA,NA,NA,NA,26.57,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,56.29,1.229,218.8,14.05
 2023-02-21T22:05:00Z,1.8000000000001e-4,20.073080000000004,14.1368,44497,NA,NA,NA,NA,NA,26.68,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,55.33,1.302,218.3,13.79
 2023-02-21T22:10:00Z,0.03589999999999996,20.41454,14.4224,44498,NA,NA,NA,NA,NA,26.57,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,55.86,0.685,208.2,13.79
