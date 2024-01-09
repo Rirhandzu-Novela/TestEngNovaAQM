@@ -1,9 +1,7 @@
 # Load Packages -----------------------------------------------------------
 
 library(tidyverse)
-library(janitor)
 library(novaAQMeng)
-library(ggplot2)
 
 # Read csv files ----------------------------------------------------------
 
@@ -31,21 +29,61 @@ GM_Raw <- map(fls, ~{
 dr1 <- "Data/Met/"
 fn <- list.files(dr1)
 
-ls_met <- readNWU(dr1)
-names(ls_met) <- fn
+ls_met <- readNWU(dir = dr1)
 
-Met_Raw <- tibble(filename = fn, data = ls_met) %>%
+Met_Raw <- ls_met %>%
   mutate(ncol = map_int(data, ncol),
          nrow = map_int(data, nrow),
-         station = gsub("([[:digit:]]{8})_([[:digit:]]{4})_([[:alpha:]]{8,10})_(House[[:digit:]]{1}[[:alpha:]]{1})_[[:print:]]*.dat", "\\4", filename),
-         Date = lubridate::ymd(gsub("([[:digit:]]{8})_([[:digit:]]{4})_([[:alpha:]]{8,10})_(House[[:digit:]]{1}[[:alpha:]]{1})_[[:print:]]*.dat", "\\1", filename))
+         station = gsub("([[:digit:]]{8})_([[:digit:]]{4})_([[:alpha:]]{8,10})_(House[[:digit:]]{1}[[:alpha:]]{1})_[[:print:]]*.dat", "\\4", file),
+         Date = lubridate::ymd(gsub("([[:digit:]]{8})_([[:digit:]]{4})_([[:alpha:]]{8,10})_(House[[:digit:]]{1}[[:alpha:]]{1})_[[:print:]]*.dat", "\\1", file))
   ) %>%
   filter(nrow >100) %>%
   select(data, station) %>%
   unnest(data) %>%
   arrange(TIMESTAMP) %>%
+  relocate(station, .before = RECORD) %>%
   distinct()
 
+
+# Function to add specific units for each met variable
+
+add_units <- function(col_name) {
+  units <- switch(col_name,
+                  WSpeed_Max = "m/s",
+                  WSpeed_S_WVT = "m/s",
+                  WSpeed_Avg = "m/s",
+                  WDir_Avg = "Deg",
+                  WDir_D1_WVT = "Deg",
+                  WDir_SD1_WVT = "Deg",
+                  Temp_Avg = "DegC",
+                  Temp_Max = "DegC",
+                  Temp_Min = "DegC",
+                  AirTC_Avg = "DegC",
+                  AirTC_Max = "DegC",
+                  AirTC_Min = "DegC",
+                  RH = "%",
+                  RH_Avg = "%",
+                  RH_Max = "%",
+                  RH_Min = "%",
+                  Rain_mm_Tot = "mm",
+                  BattV_Min = "v",
+                  BattV_Avg = "v",
+                  BattV = "v",
+                  BattV = "RN",
+                  NULL  # NULL to exclude columns without specified units
+  )
+
+  if (!is.null(units)) {
+    return(paste(col_name, "(", units, ")", sep = ""))
+  } else {
+    return(col_name)
+  }
+}
+
+
+# Apply the function to selected column names
+selected_cols <- colnames(Met_Raw)[3:length(colnames(Met_Raw))]  # Exclude the first two columns
+colnames(Met_Raw)[3:length(colnames(Met_Raw))] <- sapply(selected_cols, add_units)
 
 # Merge air poll and met data ---------------------------------------------
 

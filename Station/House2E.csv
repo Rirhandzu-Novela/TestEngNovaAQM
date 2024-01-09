@@ -1,4 +1,4 @@
-Date,CO (ppm),O3 (ppb),PM2.5 (ug/m3),RECORD,WSpeed_Max,WSpeed_S_WVT,WDir_D1_WVT,WDir_SD1_WVT,Temp_Avg,AirTC_Avg,RH,Rain_mm_Tot,BattV_Min,Temp_Max,Temp_Min,AirTC_Max,AirTC_Min,RH_Max,RH_Min,BattV_Avg,RH_Avg,WSpeed_Avg,WDir_Avg,BattV
+Date,CO (ppm),O3 (ppb),PM2.5 (ug/m3),RECORD,WSpeed_Max(m/s),WSpeed_S_WVT(m/s),WDir_D1_WVT(Deg),WDir_SD1_WVT(Deg),Temp_Avg(DegC),AirTC_Avg(DegC),RH(%),Rain_mm_Tot(mm),BattV_Min(v),Temp_Max(DegC),Temp_Min(DegC),AirTC_Max(DegC),AirTC_Min(DegC),RH_Max(%),RH_Min(%),BattV_Avg(v),RH_Avg(%),WSpeed_Avg(m/s),WDir_Avg(Deg),BattV(v)
 2023-02-21T22:00:00Z,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 2023-02-21T22:05:00Z,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 2023-02-21T22:10:00Z,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

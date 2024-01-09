@@ -2,8 +2,6 @@
 
 library(tidyverse)
 library(novaAQMeng)
-library(openair)
-library(insight)
 
 # Load Data ---------------------------------------------------------------
 

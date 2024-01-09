@@ -2,10 +2,6 @@
 
 library(tidyverse)
 library(novaAQMeng)
-library(openair)
-library(gridExtra)
-library(ggpubr)
-
 
 # Load Data ---------------------------------------------------------------
 

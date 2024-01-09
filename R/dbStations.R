@@ -25,7 +25,7 @@ tables <- dbGetQuery(con, query_tables)
 print(tables)
 
 
-table_name <- 'tbl_stations'
+table_name <- 'tbl_so2_raw'
 
 query_columns <- paste("SELECT column_name, data_type FROM information_schema.columns WHERE table_name = '", table_name, "'")
 
