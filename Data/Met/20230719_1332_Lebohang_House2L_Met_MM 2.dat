@@ -1,6 +1,0 @@
-"TOA5","CR200-Test 2","CR200X","No_SN","CR200X.Std.02","RMyoungFinalProgram2021.CR2","36029","Status"
-"TIMESTAMP","RECORD","OSversion","OSDate","OSSignature","ProgName","ProgSig","CalOffset","PakBusAddress","RfInstalled","RfNetAddr","RfAddress","RfHopSeq","RfPwrMode","Rf_ForceOn","Rf_Protocol","MaxTXPacket","RfSignalLevel","RfRxPakBusCnt","VarOutOfBounds","SkipScan","TrapCode","WatchDogCnt","ResetTables","BattVoltage","SerialNum"
-"TS","RN","","","","","","","","","","","","","","","","","","","","","","","",""
-"","","","","","","","","","","","","","","","","","","","","","","","","",""
-"2023-03-30 13:22:01",1,"CR200X.Std.02","120705",45195,"RMyoungFinalProgram2021.CR2",36029,2.875,1,0,0,0,0,"NO_RF",0,1,850,0,0,0,0,0,0,0,12.85181,16693
-"2023-07-19 14:16:15",1,"CR200X.Std.02","120705",45195,"RMyoungFinalProgram2021_cr200.CR2",36029,3.125,1,0,0,0,0,"NO_RF",0,1,850,0,0,0,0,0,0,0,13.56953,16693

@@ -1,5 +1,0 @@
-"TOA5","CR300-7891","CR300","2286","CR300.Std.02.00","CPU:CR300_Athletics.CR300","20039","Public"
-"TIMESTAMP","RECORD","BattV","PTemp_C","WSpeed","WDir","Temp","AirTC","RH","Rain_mm"
-"TS","RN","Volts","Deg C","meters/second","degrees","Deg C","Deg C","%","mm"
-"","","","","","","","","",""
-"2023-07-28 10:43:07.496",54,0,21.16965,"NAN","NAN","NAN","NAN",0,0
